@@ -1,25 +1,21 @@
 .habit_card {
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+  box-shadow: 0 13px 10px -10px #E2E8F5;
   display: flex;
-  justify-content: space-between;
   padding: 20px;
+  gap: 20px;
 
-  > {
-    width: 100%;
+  h3{
+    margin-top: 2.5px;
+    margin-bottom: 5px;
+    font-size: 18px;
   }
 
-  h5 {
-    color: lightgrey;
-    text-transform: uppercase;
-    margin: 0;
-    padding: 0;
-  }
-
-  .habits_history {
+  .habit_history {
     display: flex;
     height: 20px;
     column-gap: 10px;
+    opacity: 0.15;
   }
 }

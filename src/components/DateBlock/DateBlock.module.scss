@@ -4,7 +4,7 @@
   background: #fff;
   border-radius: 6px;
   border: none;
-  color: #404D66;
+  color: var(--text);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,5 +20,9 @@
   &.active{
     background-color: #3D8BFF;
     color: #fff;
+
+    h2{
+      color: #fff;
+    }
   }
 }
