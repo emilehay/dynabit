@@ -2,9 +2,9 @@
   position: fixed;
   bottom: 0;
   background: #fff;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 7px 30px 10px rgba(150, 170, 180, 0.5);;
   width: 100%;
-  padding: 25px;
+  padding: 20px;
   padding-bottom: calc(env(safe-area-inset-bottom) + 25px);
   display: flex;
   align-items: center;

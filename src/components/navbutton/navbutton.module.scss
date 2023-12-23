@@ -7,8 +7,15 @@
     align-items: center;
     justify-content: center;
 
-    img{
-        width: 30px;
-        opacity: 0.3;
+    svg{
+        width: 20px;
+        height: 20px;
+    }
+
+    &.active{
+        svg {
+            fill: var(--primary);
+            stroke: var(--primary);
+        }
     }
 }

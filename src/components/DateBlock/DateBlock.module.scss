@@ -3,8 +3,8 @@
   appearance: none;
   background: #fff;
   border-radius: 6px;
-  box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
   border: none;
+  color: #404D66;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,5 +15,10 @@
     margin: 0;
     padding: 0;
     text-transform: uppercase;
+  }
+
+  &.active{
+    background-color: #3D8BFF;
+    color: #fff;
   }
 }
