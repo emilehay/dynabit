@@ -1,18 +1,19 @@
-.date_block{
-    align-items: center;
-    appearance: none;
-    background: #fff;
-    border-radius: 6px;
-    border: 1px solid lightgrey;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 15px;
+.date_block {
+  align-items: center;
+  appearance: none;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 15px;
 
-    * {
-        font-weight: bold;
-        margin: 0;
-        padding: 0;
-        text-transform: uppercase;
-    }
+  * {
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+  }
 }

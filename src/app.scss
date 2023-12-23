@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,400;6..12,900&display=swap');
+
 * {
   box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
 }
 
-.app{
+.app {
   margin: 0;
   padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+  letter-spacing: 0.5px;
 }
