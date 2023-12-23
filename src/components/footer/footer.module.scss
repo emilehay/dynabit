@@ -1,0 +1,12 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 25px;
+  padding-bottom: calc(env(safe-area-inset-bottom) + 25px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
