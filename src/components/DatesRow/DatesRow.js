@@ -1,37 +1,37 @@
+import { useEffect, useState } from "react";
 import { DateBlock } from "../DateBlock/DateBlock";
 import styles from "./DatesRow.module.scss";
 
 export const DatesRow = () => {
-  let dates = [
-    {
-      active: true,
-      label: "sat",
-      day: 23,
-    },
-    {
-      label: "fri",
-      day: 22,
-    },
-    {
-      label: "thu",
-      day: 21,
-    },
-    {
-      label: "wed",
-      day: 20,
-    },
-    {
-      label: "tue",
-      day: 19,
-    },
-  ];
+  const [activeDay, setActiveDay] = useState(4);
+  const [dates, setDates] = useState();
+
+  const getDates = () => {
+    const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    return Array.from({ length: 5 }, (_, i) => {
+      const d = new Date();
+      d.setDate(d.getDate() - i);
+      return {
+        day: d.getDate(),
+        label: days[d.getDay()],
+      };
+    }).reverse();
+  };
+
+  useEffect(() => {
+    setDates(getDates());
+  }, getDates);
 
   return (
     <div className={styles.dates_row}>
-      {dates.map((date) => {
+      {dates?.map((date, index) => {
         return (
           <DateBlock
-            active={date.active}
+            index={index}
+            setActiveDay={(index) => {
+              setActiveDay(index);
+            }}
+            active={index === activeDay}
             label={date.label}
             number={date.day}
           />
