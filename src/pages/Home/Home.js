@@ -1,5 +1,5 @@
 import { DatesRow, HabitsWrapper } from "../../components";
-import { Footer, Header } from "../../components";
+import { Header } from "../../components";
 
 import fire from "../../assets/icons/fire.svg";
 import clock from "../../assets/icons/clock.svg";
@@ -42,7 +42,7 @@ export const Home = () => {
         <h2>Today's habits</h2>
         <HabitsWrapper habits={habits} />
       </div>
-      <Footer />
+      
     </div>
   );
 };

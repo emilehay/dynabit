@@ -6,5 +6,5 @@ export * from './HabitsWrapper/HabitsWrapper';
 export * from './Header/Header';
 export * from './Icon/Icon';
 export * from './Meta/Meta';
-export * from './footer/footer';
+export * from './Menu/Menu';
 export * from './navbutton/navbutton';
