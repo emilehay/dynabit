@@ -20,7 +20,7 @@ export const DatesRow = () => {
 
   useEffect(() => {
     setDates(getDates());
-  }, getDates);
+  }, [setDates]);
 
   return (
     <div className={styles.dates_row}>
