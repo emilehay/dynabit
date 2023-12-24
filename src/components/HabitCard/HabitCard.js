@@ -32,6 +32,7 @@ export const HabitCard = ({ habit }) => {
               styles={buildStyles({
                 pathColor: "var(--primary)",
                 trailColor: "var(--grey)",
+                pathTransitionDuration: 2,
               })}
               value={value}
             >
