@@ -1,9 +1,10 @@
+import { ReactSVG } from "react-svg";
 import styles from "./Meta.module.scss";
 
 export const Meta = ({ icon, text }) => {
   return (
     <div className={styles.meta}>
-      <img src={icon} alt="" />
+      <ReactSVG src={icon} />
       {text}
     </div>
   );
