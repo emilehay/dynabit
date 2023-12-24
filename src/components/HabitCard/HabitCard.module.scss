@@ -1,21 +1,32 @@
 .habit_card {
+  align-items: center;
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 13px 10px -10px #E2E8F5;
+  box-shadow: 0 13px 10px -10px #e2e8f5;
   display: flex;
-  padding: 20px;
+  display: flex;
   gap: 20px;
+  justify-content: space-between;
+  padding: 20px;
 
-  h3{
+  h3 {
     margin-top: 2.5px;
     margin-bottom: 5px;
     font-size: 18px;
   }
 
-  .habit_history {
+  .habit_meta {
     display: flex;
-    height: 20px;
-    column-gap: 10px;
-    opacity: 0.15;
+    gap: 15px;
+  }
+
+  .checkbox_wrapper{
+    height: 40px;
+    width: 40px;
+
+    .check_icon{
+      color: var(--primary);
+      width: 40%;
+    }
   }
 }

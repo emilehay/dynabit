@@ -1,18 +1,22 @@
 .header {
   background: var(--header-gradient);
+  display: flex;
   height: 150px;
-  padding: 20px;
+  justify-content: space-between;
   padding-top: calc(env(safe-area-inset-top) + 20px);
+  padding: 20px;
   position: relative;
 
   .header_left{
     h1 {
-      font-size: 26px;
+      color: #fff;
+      font-size: 20px;
       margin: 0;
       margin-bottom: 5px;
     }
   
     h5 {
+      color: #fff;
       margin: 0;
     }
   }
