@@ -1,17 +1,20 @@
 import { ReactSVG } from "react-svg";
-import { CircularProgressbarWithChildren, buildStyles } from "react-circular-progressbar";
+import {
+  CircularProgressbarWithChildren,
+  buildStyles,
+} from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
 import { Meta } from "../Meta/Meta";
 
 import styles from "./HabitCard.module.scss";
 
-import check from '../../assets/icons/check.svg'
-
-const percentage = 66;
+import check from "../../assets/icons/check.svg";
+import ProgressProvider from "./hooks/useProgressProvider";
 
 export const HabitCard = ({ habit }) => {
-  let { title } = habit;
+  let { title, progress } = habit;
+
   return (
     <div className={styles.habit_card}>
       <div className={styles.habit_details}>
@@ -23,15 +26,19 @@ export const HabitCard = ({ habit }) => {
         </div>
       </div>
       <div className={styles.checkbox_wrapper}>
-        <CircularProgressbarWithChildren
-          styles={buildStyles({
-            pathColor: "var(--primary)",
-            trailColor: "var(--grey)"
-          })}
-          value={66}
-        >
-          <ReactSVG className={styles.check_icon} src={check} />
-        </CircularProgressbarWithChildren>
+        <ProgressProvider valueStart={0} valueEnd={progress}>
+          {(value) => (
+            <CircularProgressbarWithChildren
+              styles={buildStyles({
+                pathColor: "var(--primary)",
+                trailColor: "var(--grey)",
+              })}
+              value={value}
+            >
+              {value !== 0 && <ReactSVG className={styles.check_icon} src={check} />}
+            </CircularProgressbarWithChildren>
+          )}
+        </ProgressProvider>
       </div>
     </div>
   );

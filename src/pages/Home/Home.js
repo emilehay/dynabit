@@ -9,6 +9,7 @@ import styles from "./Home.module.scss";
 let habits = [
   {
     title: "Make the bed",
+    progress: 100,
     meta: [
       { icon: clock, text: "10:00" },
       { icon: fire, text: "3" },
@@ -16,6 +17,7 @@ let habits = [
   },
   {
     title: "Care for my heels",
+    progress: 40,
     meta: [
       { icon: clock, text: "12:00" },
       { icon: fire, text: "4" },
@@ -23,6 +25,7 @@ let habits = [
   },
   {
     title: "Exercise",
+    progress: 0,
     meta: [
       { icon: clock, text: "16:00" }, 
       { icon: fire, text: "3" },
