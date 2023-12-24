@@ -1,3 +1,5 @@
+import { IonButton } from "@ionic/react";
+
 import styles from "./Menu.module.scss";
 
 import { NavButton } from "..";
@@ -14,11 +16,21 @@ import settingsIconActive from "../../assets/icons/cog-filled.svg";
 export const Menu = () => {
   return (
     <footer className={styles.menu}>
-      <NavButton active={true} icon={homeIcon} icon_active={homeIconActive} />
-      <NavButton icon={listIcon} icon_active={listIcon} />
-      <NavButton icon={calendarIcon} icon_active={calendarIconActive} />
-      <NavButton icon={chartIcon} icon_active={chartIcon} />
-      <NavButton icon={settingsIcon} icon_active={settingsIconActive} />
+      <IonButton fill="clear" size="large" routerLink="/home">
+        <NavButton icon={homeIcon} icon_active={homeIconActive} />
+      </IonButton>
+      <IonButton fill="clear" size="large" routerLink="/habits">
+        <NavButton icon={listIcon} icon_active={listIcon} link="" />
+      </IonButton>
+      <IonButton fill="clear" size="large" routerLink="/calendar">
+        <NavButton icon={calendarIcon} icon_active={calendarIconActive} />
+      </IonButton>
+      <IonButton fill="clear" size="large" routerLink="/stats">
+        <NavButton icon={chartIcon} icon_active={chartIcon} />
+      </IonButton>
+      <IonButton fill="clear" size="large" routerLink="/settings">
+        <NavButton icon={settingsIcon} icon_active={settingsIconActive} />
+      </IonButton>
     </footer>
   );
 };

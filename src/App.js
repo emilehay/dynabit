@@ -1,16 +1,33 @@
-import { Home } from './pages/Home/Home';
-import { Menu } from './components';
+import { IonApp, IonRouterOutlet, setupIonicReact } from "@ionic/react";
+import { IonReactRouter } from "@ionic/react-router";
+import { Route } from "react-router-dom";
 
-import styles from './app.scss';
+import { Calendar, Habits, Home, Settings, Stats } from "./pages";
+import { Menu } from "./components";
+
+import "@ionic/react/css/core.css";
+import styles from "./app.scss";
 require(`./assets/themes/blue.scss`);
 
-function App() {
-  return (
-    <div className={styles.app}>
-      <Home />
-      <Menu />
-    </div>
-  );
-}
+setupIonicReact();
 
+const App = () => (
+  <div className={styles.app}>
+    <IonApp>
+      <IonReactRouter>
+        <IonRouterOutlet>
+          {["/", "/home"].map((path) => (
+            <Route path={path} component={Home} exact={true} />
+          ))}
+          <Route path="/home" component={Home} exact={true} />
+          <Route path="/habits" component={Habits} exact={true} />
+          <Route path="/calendar" component={Calendar} exact={true} />
+          <Route path="/stats" component={Stats} exact={true} />
+          <Route path="/settings" component={Settings} exact={true} />
+        </IonRouterOutlet>
+      </IonReactRouter>
+    </IonApp>
+    <Menu />
+  </div>
+);
 export default App;
