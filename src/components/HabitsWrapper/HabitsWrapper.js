@@ -5,6 +5,7 @@ import { HabitDetail } from "../HabitDetail/HabitDetail";
 import { useState } from "react";
 
 import styles from "./HabitsWrapper.module.scss";
+import { AddEditHabit } from "../AddEditHabit/AddEditHabit";
 
 export const HabitsWrapper = ({ habits }) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -23,7 +24,8 @@ export const HabitsWrapper = ({ habits }) => {
           setDrawerOpen(false);
         }}
       >
-        <HabitDetail habit={activeHabit} />
+        {/* <HabitDetail habit={activeHabit} /> */}
+        <AddEditHabit />
       </Drawer>
       {habits.map((habit) => {
         return <HabitCard habit={habit} selectHabit={selectHabit}/>;
