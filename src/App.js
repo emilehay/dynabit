@@ -7,12 +7,14 @@ import { Menu } from "./components";
 
 import "@ionic/react/css/core.css";
 import styles from "./app.scss";
+import { Drawer } from "./components/Drawer/Drawer";
 require(`./assets/themes/blue.scss`);
 
 setupIonicReact();
 
 const App = () => (
   <div className={styles.app}>
+    <Drawer />
     <IonApp>
       <IonReactRouter>
         <IonRouterOutlet>
