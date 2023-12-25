@@ -12,11 +12,11 @@ import styles from "./HabitCard.module.scss";
 import check from "../../assets/icons/check.svg";
 import ProgressProvider from "./hooks/useProgressProvider";
 
-export const HabitCard = ({ habit }) => {
+export const HabitCard = ({ habit, selectHabit }) => {
   let { title, progress } = habit;
 
   return (
-    <div className={styles.habit_card}>
+    <div className={styles.habit_card} onClick={() => { selectHabit(habit) }}>
       <div className={styles.habit_details}>
         <h3>{title}</h3>
         <div className={styles.habit_meta}>

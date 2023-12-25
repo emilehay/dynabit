@@ -1,22 +1,24 @@
-import { useState } from "react";
 import styles from "./Drawer.module.scss";
 import { ReactSVG } from "react-svg";
 
 import closeIcon from "../../assets/icons/close.svg";
-import { IonButton, IonIcon } from "@ionic/react";
 
-export const Drawer = () => {
-  const [open, setOpen] = useState(false);
-
+export const Drawer = (props) => {
   return (
-    <div className={`${styles.backdrop} ${open ? styles.open : ""}`}>
-      <div className={`${styles.drawer} ${open ? styles.open : ""}`}>
+    <div className={`${styles.backdrop} ${props.open ? styles.open : ""}`}>
+      <div className={`${styles.drawer} ${props.open ? styles.open : ""}`}>
         <div className={styles.drawer_close}>
-          <button onClick={() => { setOpen(false); }}>
+          <button
+            onClick={() => {
+              props.closeDrawer();
+            }}
+          >
             <ReactSVG src={closeIcon} />
           </button>
         </div>
-        Hello
+        <div className={styles.drawer_container}>
+          {props.children}
+        </div>
       </div>
     </div>
   );
