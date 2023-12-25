@@ -16,19 +16,19 @@ import settingsIconActive from "../../assets/icons/cog-filled.svg";
 export const Menu = () => {
   return (
     <footer className={styles.menu}>
-      <IonButton fill="clear" size="large" routerLink="/home">
+      <IonButton fill="clear" routerLink="/home">
         <NavButton icon={homeIcon} icon_active={homeIconActive} />
       </IonButton>
-      <IonButton fill="clear" size="large" routerLink="/habits">
+      <IonButton fill="clear" routerLink="/habits">
         <NavButton icon={listIcon} icon_active={listIcon} link="" />
       </IonButton>
-      <IonButton fill="clear" size="large" routerLink="/calendar">
+      <IonButton fill="clear" routerLink="/calendar">
         <NavButton icon={calendarIcon} icon_active={calendarIconActive} />
       </IonButton>
-      <IonButton fill="clear" size="large" routerLink="/stats">
+      <IonButton fill="clear" routerLink="/stats">
         <NavButton icon={chartIcon} icon_active={chartIcon} />
       </IonButton>
-      <IonButton fill="clear" size="large" routerLink="/settings">
+      <IonButton fill="clear" routerLink="/settings">
         <NavButton icon={settingsIcon} icon_active={settingsIconActive} />
       </IonButton>
     </footer>
